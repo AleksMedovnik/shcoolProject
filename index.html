@@ -683,29 +683,35 @@
         name='form-poll'>
         <h2>Заполните форму</h2>
 
-        <p>
-            <b>Введите ваше имя:</b>
-            <input type="text"
-                name='username'
-                required>
+        <div class='form-poll__data'>
+            <p>
+                <b>Введите ваше имя:</b>
+                <input type="text"
+                    name='username'
+                    required>
+            </p>
+            <p>
+                <b>Введите ваш email:</b>
+                <input type="email"
+                    name='email'
+                    required>
+            </p>
+        </div>
 
-            <b>Введите ваш email:</b>
-            <input type="email"
-                name='email'
-                required>
-        </p>
-
-        <p>
-            <b>Введите пароль:</b>
-            <input type="password"
-                name='password'
-                required>
-
-            <b>Введите ваш возраст:</b>
-            <input type="number"
-                name='number'
-                required>
-        </p>
+        <div class='form-poll__data'>
+            <p>
+                <b>Введите пароль:</b>
+                <input type="password"
+                    name='password'
+                    required>
+            </p>
+            <p>
+                <b>Введите ваш возраст:</b>
+                <input type="number"
+                    name='number'
+                    required>
+            </p>
+        </div>
 
         <p>
             <b>Выберите ваш любимый цвет:</b>
