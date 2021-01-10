@@ -1066,8 +1066,14 @@ div[class ^='cart'] {
 
 .get-started__button>a:hover {
     background: #FFFFFF;
-    ;
     color: #565F82;
 }
 
 /* get-started style end */
+
+
+@media screen and (max-width: 450px){
+    h2[class~='big'] {
+        width: 100%;
+    }
+}
