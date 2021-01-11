@@ -1061,6 +1061,9 @@ div[class ^='cart'] {
     aside {
         order: 0;
     }
+    .carousel-control-next {
+        right: 0;
+    }
 }
 @media screen and (max-width: 800px) {
     .cart-box {
@@ -1078,6 +1081,17 @@ div[class ^='cart'] {
         grid-template-columns: repeat(2, 1fr);
     }
     .features-content {
+        width: 100%;
+    }
+    .visual-section-1{
+        display: none;
+    }
+    .visual-section-2{
+        height: 100px;
+        background: white;
+        padding-top: 0;
+    }
+    .get-started {
         width: 100%;
     }
 }
@@ -1101,9 +1115,7 @@ div[class ^='cart'] {
     h2[class~='big'] {
         width: 100%;
     }
+    .ticker {
+        width: 300px;
+    }
 }
-
-
-
-
-
