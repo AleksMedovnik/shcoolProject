@@ -616,6 +616,7 @@ div[class ^='cart'] {
 }
 .form-poll__data{
     display: flex;
+    flex-wrap: wrap;
 }
 .form-poll h2 {
     color: rgb(64, 232, 94);
@@ -1078,17 +1079,20 @@ div[class ^='cart'] {
         grid-template-areas: 'o f' 'm s';
         grid-template-columns: repeat(2, 1fr);
     }
+    .features-content {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 600px){
     .table-rating {
         width: 100%;
-        margin: 50px 0;
     }
 }
 @media screen and (max-width: 490px) {
     .social-media a {
         margin-right: 10px;
     }
+
 }
 @media screen and (max-width: 450px){
     h2[class~='big'] {
