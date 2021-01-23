@@ -1,10 +1,15 @@
 const calculate = () => {
-    try {
 
-        let result = prompt('Привет! Я калькулятор. Напишите выражение, которое хотите вычислить!', '');
-        if (result == null) {
-            alert('Ввод отменен');
-        } else if (result == '') {
+
+    let result = prompt('Привет! Я калькулятор. Напишите выражение, которое хотите вычислить!', '');
+    if (result == null) {
+        alert('Ввод отменен');
+    };
+
+    result = result.replace(/,/g, ".");
+
+    try {
+        if (result == '') {
             alert('Вы ничего не ввели!');
         } else if (eval(result) == Infinity || eval(result) == -Infinity) {
             alert('На нуль делить нельзя!');
