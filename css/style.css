@@ -309,9 +309,9 @@ p[class |='text'] {
 /* contact start */
 
 .contact {
-    /* position: relative; */
+    position: relative;
     /* position: fixed; */
-    position: sticky;
+    /* position: sticky; */
     top: 10px;
     left: 85%;
     width: 50px;
@@ -1118,4 +1118,10 @@ div[class ^='cart'] {
     .ticker {
         width: 300px;
     }
+}
+
+.calculator{
+    position:sticky;
+    top: 15px;
+    left: 70%;
 }
