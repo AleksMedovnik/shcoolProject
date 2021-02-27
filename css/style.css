@@ -563,7 +563,7 @@ div[class ^='cart'] {
 /* table style start  */
 
 .table-rating {
-    width: 90%;
+    width: 90vw;
     margin: 50px auto;
     color: rgb(146, 142, 142);
 }
@@ -588,7 +588,7 @@ div[class ^='cart'] {
 }
 
 .table-rating caption {
-    width: 100%;
+    width: 90vw;
     height: 100px;
     background-image: url('../images/table/table_header.jpg');
     background-size: 300px 100px;
@@ -1097,8 +1097,14 @@ div[class ^='cart'] {
 }
 @media screen and (max-width: 600px){
     .table-rating {
-        width: 100%;
+        width: 100vw;
         font-size: 12px;
+    }
+    .table-rating img{
+        width: 30px;
+    }
+    .table-rating caption {
+        width: 100vw;
     }
     .table-rating th, .table-rating td {
         border: 1px solid gray;

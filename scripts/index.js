@@ -2,28 +2,30 @@ const calculate = () => {
 
 
     let result = prompt('Привет! Я калькулятор. Напишите выражение, которое хотите вычислить!', '');
-    if (result == null) {
+    if (result === null) {
         alert('Ввод отменен');
-    } else{
+    } else {
         result = result.replace(/,/g, ".");
 
         try {
-            if (result == '') {
+            if (result === '') {
                 alert('Вы ничего не ввели!');
-            } else if (eval(result) == Infinity || eval(result) == -Infinity) {
+            } else if (eval(result) === Infinity || eval(result) === -Infinity) {
                 alert('На нуль делить нельзя!');
+            } else if (isNaN(result)) {
+                alert(`Пожалуйста, введите корректное выражение! :)`);
             } else {
                 alert(eval(result));
             }
-    
+
         } catch (err) {
-    
-            alert(`Пожалуйста, введите корректное выражение! :)`); // (3) <--
-    
+
+            alert(`Пожалуйста, введите корректное выражение! :)`);
+
         }
     }
 
-    
+
 };
 
 const calculator = document.getElementById('calculator');
