@@ -12,7 +12,7 @@ const calculate = () => {
                 alert('Вы ничего не ввели!');
             } else if (eval(result) === Infinity || eval(result) === -Infinity) {
                 alert('На нуль делить нельзя!');
-            } else if (isNaN(result)) {
+            } else if (isNaN(eval(result))) {
                 alert(`Пожалуйста, введите корректное выражение! :)`);
             } else {
                 alert(eval(result));
