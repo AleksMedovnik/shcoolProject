@@ -1,21 +1,23 @@
 const calculate = () => {
 
 
-    let result = prompt('Привет! Я калькулятор. Напишите выражение, которое хотите вычислить!', '');
-    if (result === null) {
+    let data = prompt('Привет! Я - калькулятор! Напишите выражение, которое хотите вычислить!', '');
+    if (data === null) {
         alert('Ввод отменен');
     } else {
-        result = result.replace(/,/g, ".");
-
+        data = data.replace(/,/g, ".");
         try {
-            if (result === '') {
+            let result = eval(data);
+
+            if (data === '') {
                 alert('Вы ничего не ввели!');
-            } else if (eval(result) === Infinity || eval(result) === -Infinity) {
+            } else if (result === Infinity || result === -Infinity) {
                 alert('На нуль делить нельзя!');
-            } else if (isNaN(eval(result))) {
+            } else if (isNaN(result)) {
                 alert(`Пожалуйста, введите корректное выражение! :)`);
             } else {
-                alert(eval(result));
+                alert(` Поверьте, я точно знаю! Будет число:
+                ${result}`);
             }
 
         } catch (err) {
