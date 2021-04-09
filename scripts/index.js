@@ -33,3 +33,25 @@ const calculate = () => {
 const calculator = document.getElementById('calculator');
 
 calculator.addEventListener('click', calculate);
+
+
+// menuBurger
+const menuBurger = document.getElementById('menu-burger');
+const menu = document.getElementById('menu');
+const header = document.getElementById('header');
+
+const toggleMenu = () => {
+    menu.classList.toggle('menu-none');
+    header.classList.toggle('m-b-60');
+}
+
+menuBurger.addEventListener('click', toggleMenu);
+
+
+// modal form
+const getStarted = document.getElementById('get-started');
+const modalForm = document.getElementById('modal-form');
+const closeModalForm = document.getElementById('close-modal-form');
+
+getStarted.addEventListener('click', () => modalForm.style.display = 'flex');
+closeModalForm.addEventListener('click', () => modalForm.style.display = 'none');
