@@ -21,22 +21,16 @@
                         class="menu-burger"></div>
                     <ul id='menu'
                         class="menu menu-none">
-                        <li><a href="#">News</a>
+                        <li><a class='wrap' href="#carts">Info</a>
                             <ol>
-                                <li><a href="#">Technologies</a></li>
-                                <li><a href="#">Fashion</a></li>
-                                <li><a href="#">Finance</a></li>
+                                <li><a class='wrap' href="#rating">Rating</a></li>
+                                <li><a class='wrap' href="#features">Features</a></li>
+                                <li><a class='wrap' href="#started">Get started</a></li>
                             </ol>
                         </li>
-                        <li><a href="">Contacts</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Business</a>
-                            <ol>
-                                <li><a href="#">Loans</a></li>
-                                <li><a href="#">Investments</a></li>
-                                <li><a href="#">Markets</a></li>
-                            </ol>
-                        </li>
+                        <li><a class='wrap' href="#form-poll">Interview</a></li>
+                        <li><a class='wrap' href="#blog">Blog</a></li>
+                        <li><a class='wrap' href="#skills">Skills</a></li>
                     </ul>
                 </nav>
             </div>
@@ -53,7 +47,7 @@
                 </div>
                 <div>
                     <button id='get-started'
-                        class="started-button">Get started</button>
+                        class="started-button">Login</button>
                 </div>
             </div>
         </div>
@@ -72,7 +66,7 @@
                 placeholder="Your password"
                 class='login-form__input'>
             <button type='submit'
-                class='login-form__button'>Submit</button>
+                class='btn login-form__button'>Submit</button>
             <span id='close-modal-form'
                 class='wrap close close-modal-form'>&#10008;</span>
         </form>
@@ -81,9 +75,9 @@
 
     <div class="contact"><a href="#"></a></div>
     <button id='calculator'
-        class='calculator'>Calculator</button>
+        class='calculator btn'>Calculator</button>
 
-    <div class="blog">
+    <div id='blog' class="blog">
         <article class='article'>
             <h2 class="big text">Lorem ipsum</h2>
             <img src="images/elf.jpg"
@@ -143,7 +137,7 @@
             <div class="clear-both"></div>
         </article>
 
-        <aside>
+        <aside class='aside'>
             <section id='form-images'>
                 <input type="checkbox"
                     name="check"
@@ -158,17 +152,43 @@
                 <img src="images/form-3.jpg"
                     alt="">
             </section>
+
+            <section class="slider">
+                <ul id="slides" class='slides'>
+                    <li class="slide showing"><a href='#'></a></li>
+                    <li class="slide"><a href='#'></a></li>
+                    <li class="slide"><a href='#'></a></li>
+                    <li class="slide"><a href='#'></a></li>
+                    <li class="slide"><a href='#'></a></li>
+                </ul>
+                <span id='arrow-prev' class='wrap toggle-arrow arrow-prev'>&#8592;</span>
+                <span id='arrow-next' class='wrap toggle-arrow arrow-next'>&#8594;</span>
+                <div id='toggle-radio' class='toggle-radio'>
+                    <input type="radio" name="rad" value='0' checked>
+                    <input type="radio" name="rad" value='1'>
+                    <input type="radio" name="rad" value='2'>
+                    <input type="radio" name="rad" value='3'>
+                    <input type="radio" name="rad" value='4'>
+                </div>
+                <ul id="slides-min" class="slides-min">
+                    <li class="slide-min showing-min"><img src="./images/slider/item_1.jfif" id='0'></li>
+                    <li class="slide-min"><img src="./images/slider/item_2.jfif"id='1'></li>
+                    <li class="slide-min"><img src="./images/slider/item_3.jfif" id='2'></li>
+                    <li class="slide-min"><img src="./images/slider/item_4.jfif" id='3'></li>
+                    <li class="slide-min"><img src="./images/slider/item_5.jfif" id='4'></li>
+                </ul>
+            </section>
         </aside>
 
 
     </div>
 
-    <section class="skills">
+    <section id='skills' class="skills">
         <div class="skill-1">
             <img class='skill-img'
                 src="images/skills/skill_1.png"
                 alt="">
-            <h3>Качество</h3>
+            <h3>Quality</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.
@@ -178,14 +198,14 @@
             <img class='skill-img'
                 src="images/skills/skill_2.png"
                 alt="">
-            <h3>Скорость</h3>
+            <h3>Speed</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.
             </p>
         </div>
         <div class="skill-2">
-            <h3>Почему мы?</h3>
+            <h3>Why us?</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -200,7 +220,7 @@
     </section>
 
 
-    <section class='cart-box'>
+    <section id='carts' class='cart-box'>
 
         <div class="cart-1">
             <h5><a class='cart-link-text'
@@ -278,7 +298,7 @@
         </div>
     </section>
 
-    <section>
+    <section id='rating'>
         <table class='table table-rating caption-top'>
             <caption></caption>
             <thead>
@@ -377,7 +397,7 @@
         </table>
     </section>
 
-    <form class='form-poll'
+    <form id='form-poll' class='form-poll'
         action=""
         autocomplete
         method='get'
@@ -535,7 +555,7 @@
     </div>
 
 
-    <section class="features-wrap wrap">
+    <section id='features' class="features-wrap wrap">
         <div class="features-content">
             <a href="#">about us</a>
             <h2><a href="#">Read about our app</a></h2>
@@ -611,7 +631,7 @@
     </div>
 
 
-    <section class='get-started-wrap'>
+    <section id='started' class='get-started-wrap'>
         <div class="get-started">
             <a href="#">PLAN YOUR LIFE</a>
             <h5><a href="#">Get <b class='fw-bold'>started</b> now</a></h5>

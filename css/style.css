@@ -110,6 +110,10 @@ a {
     align-items: center;
 }
 
+.btn{
+    padding: 5px;
+}
+
 .close {
     width: 25px;
     height: 25px;
@@ -252,15 +256,15 @@ nav {
 /*Вложенный селектор*/
 
 .menu a {
-    display: block;
+    /* display: block; */
     box-sizing: border-box;
     color: rgb(194, 120, 120);
     background: rgb(68, 26, 148);
     width: 110px;
     height: 40px;
-    padding-left: 5px;
-    padding-top: 5px;
-    border-radius: 4px;
+    /* padding-left: 5px;
+    padding-top: 5px; */
+    border-radius: 2px;
     transition: background 0.6s;
 }
 
@@ -314,22 +318,142 @@ nav {
     position: sticky;
     top: 15px;
     left: 57%;
+    font-size: 1.1rem;
 }
 
 .blog {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    padding: 0 20px;
+    grid-gap: 25px;
 }
 
-aside, article {
+.aside, .article {
     flex-basis: 300px;
 }
 
-aside {
+.aside {
     order: -1;
 }
 
+/* slider style start */
+.slider, .slides  {
+    position: relative;
+}
+
+.slider, .slides, .slide {
+    width: 290px;
+    height: 300px;
+}
+
+.slide, .toggle-arrow, .toggle-radio {
+    position: absolute;
+}
+
+.slider{
+    margin: 0 auto;
+}
+.slides{
+    padding: 0;
+}
+
+.slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+    background-size: 290px 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide:nth-of-type(1) {
+    background-image: url('../images/slider/item_1.jfif');
+}
+
+.slide:nth-of-type(2) {
+    background-image: url('../images/slider/item_2.jfif');
+}
+
+.slide:nth-of-type(3) {
+    background-image: url('../images/slider/item_3.jfif');
+}
+
+.slide:nth-of-type(4) {
+    background-image: url('../images/slider/item_4.jfif');
+}
+
+.slide:nth-of-type(5) {
+    background-image: url('../images/slider/item_5.jfif');
+}
+
+.toggle-arrow {
+    top: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+    background: black;
+    border-radius: 100%;
+    z-index: 3;
+}
+
+.arrow-prev {
+    left: 0;
+}
+
+.arrow-next {
+    right: 0;
+}
+
+.toggle-radio {
+    bottom: 20px;
+    left: 80px;
+    width: 130px;
+    height: 30px;
+    background: black;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 12px;
+    z-index: 3;
+}
+
+.slides-min {
+    margin: 8px 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.slide-min {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 0;
+}
+
+.slide-min:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.slide-min, .slide-min img {
+    width: 54.8px;
+    height: 58px;
+    font-size: 0;
+}
+
+.showing-min {
+    box-shadow: 0 0 15px 5px orange;
+}
+/* slider style end */
 /* article start */
 
 .article {
@@ -342,6 +466,7 @@ aside {
     height: auto;
     float: left;
     margin-right: 15px;
+    border-radius: 3px;
 }
 
 .clear-both {
@@ -365,19 +490,8 @@ q[title='Цитата №2'] {
     color: rgb(119, 130, 192)
 }
 
-/* a[href ^='https'] {
-    color: red;
-}
-
-a[href $='.com'] {
-    color: green;
-}
-
-a[href *='github'] {
-    color: gold;
-} */
-
 h2[class~='big'] {
+    margin-bottom: 10px;
     background: rgb(94, 60, 156);
     color: rgb(156, 18, 18);
     padding: 3px;
@@ -403,8 +517,6 @@ p[class |='text'] {
 
 .contact {
     position: relative;
-    /* position: fixed; */
-    /* position: sticky; */
     top: 10px;
     left: 85%;
     width: 50px;
@@ -476,7 +588,7 @@ label#check.lab.show {
 /* skills start */
 
 .skills {
-    min-height: 500px;
+    min-height: 400px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -538,7 +650,7 @@ div[class ^='skill'] {
 .cart-box {
     width: 80%;
     min-height: 400px;
-    margin: 50px auto;
+    margin: 0 auto;
     display: grid;
     grid-template-areas: 'cart-1 cart-1 cart-2' 'cart-3 cart-4 cart-5';
     grid-template-rows: 220px;
@@ -593,6 +705,7 @@ div[class ^='cart'] {
 }
 
 /* cart-box end  */
+
 /* table style start  */
 
 .table-rating {
@@ -619,6 +732,9 @@ div[class ^='cart'] {
 
 .table-rating thead, .table-rating tfoot, .table-rating tr:hover {
     background: #000;
+}
+.table-rating tfoot > tr{
+    height: 49px;
 }
 
 .table-rating caption {
@@ -1101,7 +1217,6 @@ div[class ^='cart'] {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
     }
- 
     .visual-section-1 {
         display: none;
     }
@@ -1164,13 +1279,14 @@ div[class ^='cart'] {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, auto);
     }
-    .contact{
+    .contact {
         left: 65%;
     }
-    .calculator{
+    .calculator {
         left: 35%;
     }
 }
+
 @media screen and (max-width: 350px) {
     .table-rating {
         display: none;

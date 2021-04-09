@@ -55,3 +55,79 @@ const closeModalForm = document.getElementById('close-modal-form');
 
 getStarted.addEventListener('click', () => modalForm.style.display = 'flex');
 closeModalForm.addEventListener('click', () => modalForm.style.display = 'none');
+
+
+// Slider
+const slide = document.querySelectorAll('#slides .slide');
+const slideTime = 2000;
+const slides = document.getElementById('slides'); 
+const arrowPrev = document.getElementById('arrow-prev'); 
+const arrowNext = document.getElementById('arrow-next');
+const toggleRadio = document.getElementById('toggle-radio'); 
+const toggleInput = toggleRadio.querySelectorAll('input');
+const slidesMin = document.getElementById('slides-min');
+const slideMin =  document.querySelectorAll('#slides-min .slide-min');
+
+
+slides.onmouseover = stopSlide;
+slides.onmouseout = continueSlideInterval; 
+
+arrowNext.addEventListener('click', showNextSlide);
+arrowPrev.addEventListener('click', showPreviousSlide);
+toggleRadio.addEventListener('input', toggleSlide);
+slidesMin.addEventListener('click', toggleMinSlide);
+
+
+let currentSlide = 0;
+let slideInterval;
+
+continueSlideInterval();
+
+
+function stopSlide() {
+	clearInterval(slideInterval);
+}
+
+function nextSlide() {
+	slideReset();
+	currentSlide = ++currentSlide % slide.length;
+	slideSet();
+} 
+
+function continueSlideInterval() {
+	slideInterval = setInterval(nextSlide, slideTime);
+}
+
+function showNextSlide(){
+	stopSlide();
+	nextSlide();
+}
+function showPreviousSlide(){
+	stopSlide();
+	slideReset();
+	currentSlide = (currentSlide == 0) ? slide.length - 1 : currentSlide-1;
+	slideSet();
+}
+function toggleSlide(event){
+	stopSlide();
+	slideReset();
+	currentSlide = event.target.value;
+	slideSet();
+} 
+function toggleMinSlide(event){
+	if(event.target.tagName == 'IMG'){
+		stopSlide();
+		slideReset();
+		currentSlide = event.target.id;
+		slideSet();
+	}
+} 
+function slideReset(){
+	slide[currentSlide].className = 'slide';
+	slideMin[currentSlide].className = 'slide-min';
+}
+function slideSet(){
+	slide[currentSlide].className = 'slide showing';
+	slideMin[currentSlide].className = 'slide-min showing-min';
+	toggleInput[currentSlide].checked = true;
+}
