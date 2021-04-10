@@ -242,6 +242,10 @@ nav {
     display: inline-block;
     position: relative;
 }
+.menu li {
+    margin-top: 3px;
+}
+
 
 .menu>li>ol {
     position: absolute;
@@ -262,8 +266,6 @@ nav {
     background: rgb(68, 26, 148);
     width: 110px;
     height: 40px;
-    /* padding-left: 5px;
-    padding-top: 5px; */
     border-radius: 2px;
     transition: background 0.6s;
 }
@@ -314,6 +316,28 @@ nav {
 
 /* header style end */
 
+/* canvas style start */
+.canvas-wrap{
+    min-height: 500px;
+}
+.canvas{
+    width: 900px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+}
+.canvas__main{
+    width: 500px;
+    height: 300px;
+    border: 1px solid gray;
+}
+.canvas__painting-tools{
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 30px;
+}
+/* canvas style end */
+
 .calculator {
     position: sticky;
     top: 15px;
@@ -352,7 +376,7 @@ nav {
 }
 
 .slider{
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 .slides{
     padding: 0;
@@ -401,10 +425,8 @@ nav {
 .toggle-arrow {
     top: 50%;
     cursor: pointer;
-    font-size: 1.2rem;
-    color: white;
-    background: black;
-    border-radius: 100%;
+    font-size: 2rem;
+    color: rgb(22, 11, 11);
     z-index: 3;
 }
 
@@ -419,12 +441,6 @@ nav {
 .toggle-radio {
     bottom: 20px;
     left: 80px;
-    width: 130px;
-    height: 30px;
-    background: black;
-    text-align: center;
-    padding-top: 5px;
-    border-radius: 12px;
     z-index: 3;
 }
 

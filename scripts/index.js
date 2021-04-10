@@ -1,31 +1,33 @@
+"use strict"
+
 const calculate = () => {
 
 
-    let data = prompt('Привет! Я - калькулятор! Напишите выражение, которое хотите вычислить!', '');
-    if (data === null) {
-        alert('Ввод отменен');
-    } else {
-        data = data.replace(/,/g, ".");
-        try {
-            let result = eval(data);
+	let data = prompt('Привет! Я - калькулятор! Напишите выражение, которое хотите вычислить!', '');
+	if (data === null) {
+		alert('Ввод отменен');
+	} else {
+		data = data.replace(/,/g, ".");
+		try {
+			let result = eval(data);
 
-            if (data === '') {
-                alert('Вы ничего не ввели!');
-            } else if (result === Infinity || result === -Infinity) {
-                alert('На нуль делить нельзя!');
-            } else if (isNaN(result)) {
-                alert(`Пожалуйста, введите корректное выражение! :)`);
-            } else {
-                alert(` Поверьте, я точно знаю! Будет число:
+			if (data === '') {
+				alert('Вы ничего не ввели!');
+			} else if (result === Infinity || result === -Infinity) {
+				alert('На нуль делить нельзя!');
+			} else if (isNaN(result)) {
+				alert(`Пожалуйста, введите корректное выражение! :)`);
+			} else {
+				alert(` Поверьте, я точно знаю! Будет число:
                 ${result}`);
-            }
+			}
 
-        } catch (err) {
+		} catch (err) {
 
-            alert(`Пожалуйста, введите корректное выражение! :)`);
+			alert(`Пожалуйста, введите корректное выражение! :)`);
 
-        }
-    }
+		}
+	}
 
 
 };
@@ -41,8 +43,8 @@ const menu = document.getElementById('menu');
 const header = document.getElementById('header');
 
 const toggleMenu = () => {
-    menu.classList.toggle('menu-none');
-    header.classList.toggle('m-b-60');
+	menu.classList.toggle('menu-none');
+	header.classList.toggle('m-b-60');
 }
 
 menuBurger.addEventListener('click', toggleMenu);
@@ -60,17 +62,17 @@ closeModalForm.addEventListener('click', () => modalForm.style.display = 'none')
 // Slider
 const slide = document.querySelectorAll('#slides .slide');
 const slideTime = 2000;
-const slides = document.getElementById('slides'); 
-const arrowPrev = document.getElementById('arrow-prev'); 
+const slides = document.getElementById('slides');
+const arrowPrev = document.getElementById('arrow-prev');
 const arrowNext = document.getElementById('arrow-next');
-const toggleRadio = document.getElementById('toggle-radio'); 
+const toggleRadio = document.getElementById('toggle-radio');
 const toggleInput = toggleRadio.querySelectorAll('input');
 const slidesMin = document.getElementById('slides-min');
-const slideMin =  document.querySelectorAll('#slides-min .slide-min');
+const slideMin = document.querySelectorAll('#slides-min .slide-min');
 
 
 slides.onmouseover = stopSlide;
-slides.onmouseout = continueSlideInterval; 
+slides.onmouseout = continueSlideInterval;
 
 arrowNext.addEventListener('click', showNextSlide);
 arrowPrev.addEventListener('click', showPreviousSlide);
@@ -92,42 +94,103 @@ function nextSlide() {
 	slideReset();
 	currentSlide = ++currentSlide % slide.length;
 	slideSet();
-} 
+}
 
 function continueSlideInterval() {
 	slideInterval = setInterval(nextSlide, slideTime);
 }
 
-function showNextSlide(){
+function showNextSlide() {
 	stopSlide();
 	nextSlide();
 }
-function showPreviousSlide(){
+function showPreviousSlide() {
 	stopSlide();
 	slideReset();
-	currentSlide = (currentSlide == 0) ? slide.length - 1 : currentSlide-1;
+	currentSlide = (currentSlide == 0) ? slide.length - 1 : currentSlide - 1;
 	slideSet();
 }
-function toggleSlide(event){
+function toggleSlide(event) {
 	stopSlide();
 	slideReset();
 	currentSlide = event.target.value;
 	slideSet();
-} 
-function toggleMinSlide(event){
-	if(event.target.tagName == 'IMG'){
+}
+function toggleMinSlide(event) {
+	if (event.target.tagName == 'IMG') {
 		stopSlide();
 		slideReset();
 		currentSlide = event.target.id;
 		slideSet();
 	}
-} 
-function slideReset(){
+}
+function slideReset() {
 	slide[currentSlide].className = 'slide';
 	slideMin[currentSlide].className = 'slide-min';
 }
-function slideSet(){
+function slideSet() {
 	slide[currentSlide].className = 'slide showing';
 	slideMin[currentSlide].className = 'slide-min showing-min';
 	toggleInput[currentSlide].checked = true;
 }
+
+
+// canvas
+window.onload = playAnimation;
+
+const main = {};
+
+function init() {
+	main.canvas = document.getElementById('canvas');
+	main.ctx = canvas.getContext('2d');
+	main.canvasColor = document.getElementById('canvasColor');
+	main.canvasRange = document.getElementById('canvasRange');
+
+	main.canvas.width = 500;
+	main.canvas.height = 300;
+
+	main.brush = {
+		x: main.canvas.width / 2,
+		y: main.canvas.height / 2,
+		radius: 0,
+		fillStyle: 'rgba(219, 20, 20, 1)',
+		// width: 2,
+	};
+	main.ctx.fillStyle = main.brush.fillStyle;	
+
+	canvas.addEventListener('mousemove', setBrush);
+	main.canvasColor.addEventListener('input', () => main.ctx.fillStyle = main.canvasColor.value);
+    main.canvasRange.addEventListener('input', () => main.brush.radius = main.canvasRange.value); 
+};
+
+
+
+function animation() {
+	update();
+	render();
+	main.anim = requestAnimationFrame(animation);
+};
+
+function setBrush(event) {
+    main.brush.x = event.pageX - main.canvas.getBoundingClientRect().x - document.documentElement.scrollLeft;
+    main.brush.y = event.pageY - main.canvas.getBoundingClientRect().y - document.documentElement.scrollTop;
+}
+
+function render() {
+	main.ctx.beginPath();
+	main.ctx.arc(main.brush.x, main.brush.y, main.brush.radius, 0, 2 * Math.PI);
+	main.ctx.fill();
+};
+
+
+
+function update() {
+	
+};
+
+
+
+function playAnimation() {
+	init();
+	animation();
+};

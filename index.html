@@ -21,16 +21,23 @@
                         class="menu-burger"></div>
                     <ul id='menu'
                         class="menu menu-none">
-                        <li><a class='wrap' href="#carts">Info</a>
+                        <li><a class='wrap'
+                                href="#carts">Info</a>
                             <ol>
-                                <li><a class='wrap' href="#rating">Rating</a></li>
-                                <li><a class='wrap' href="#features">Features</a></li>
-                                <li><a class='wrap' href="#started">Get started</a></li>
+                                <li><a class='wrap'
+                                        href="#rating">Rating</a></li>
+                                <li><a class='wrap'
+                                        href="#features">Features</a></li>
+                                <li><a class='wrap'
+                                        href="#started">Get started</a></li>
                             </ol>
                         </li>
-                        <li><a class='wrap' href="#form-poll">Interview</a></li>
-                        <li><a class='wrap' href="#blog">Blog</a></li>
-                        <li><a class='wrap' href="#skills">Skills</a></li>
+                        <li><a class='wrap'
+                                href="#form-poll">Interview</a></li>
+                        <li><a class='wrap'
+                                href="#blog">Blog</a></li>
+                        <li><a class='wrap'
+                                href="#skills">Skills</a></li>
                     </ul>
                 </nav>
             </div>
@@ -77,7 +84,8 @@
     <button id='calculator'
         class='calculator btn'>Calculator</button>
 
-    <div id='blog' class="blog">
+    <div id='blog'
+        class="blog">
         <article class='article'>
             <h2 class="big text">Lorem ipsum</h2>
             <img src="images/elf.jpg"
@@ -154,28 +162,49 @@
             </section>
 
             <section class="slider">
-                <ul id="slides" class='slides'>
+                <ul id="slides"
+                    class='slides'>
                     <li class="slide showing"><a href='#'></a></li>
                     <li class="slide"><a href='#'></a></li>
                     <li class="slide"><a href='#'></a></li>
                     <li class="slide"><a href='#'></a></li>
                     <li class="slide"><a href='#'></a></li>
                 </ul>
-                <span id='arrow-prev' class='wrap toggle-arrow arrow-prev'>&#8592;</span>
-                <span id='arrow-next' class='wrap toggle-arrow arrow-next'>&#8594;</span>
-                <div id='toggle-radio' class='toggle-radio'>
-                    <input type="radio" name="rad" value='0' checked>
-                    <input type="radio" name="rad" value='1'>
-                    <input type="radio" name="rad" value='2'>
-                    <input type="radio" name="rad" value='3'>
-                    <input type="radio" name="rad" value='4'>
+                <span id='arrow-prev'
+                    class='wrap toggle-arrow arrow-prev'>&#8592;</span>
+                <span id='arrow-next'
+                    class='wrap toggle-arrow arrow-next'>&#8594;</span>
+                <div id='toggle-radio'
+                    class='toggle-radio'>
+                    <input type="radio"
+                        name="rad"
+                        value='0'
+                        checked>
+                    <input type="radio"
+                        name="rad"
+                        value='1'>
+                    <input type="radio"
+                        name="rad"
+                        value='2'>
+                    <input type="radio"
+                        name="rad"
+                        value='3'>
+                    <input type="radio"
+                        name="rad"
+                        value='4'>
                 </div>
-                <ul id="slides-min" class="slides-min">
-                    <li class="slide-min showing-min"><img src="./images/slider/item_1.jfif" id='0'></li>
-                    <li class="slide-min"><img src="./images/slider/item_2.jfif"id='1'></li>
-                    <li class="slide-min"><img src="./images/slider/item_3.jfif" id='2'></li>
-                    <li class="slide-min"><img src="./images/slider/item_4.jfif" id='3'></li>
-                    <li class="slide-min"><img src="./images/slider/item_5.jfif" id='4'></li>
+                <ul id="slides-min"
+                    class="slides-min">
+                    <li class="slide-min showing-min"><img src="./images/slider/item_1.jfif"
+                            id='0'></li>
+                    <li class="slide-min"><img src="./images/slider/item_2.jfif"
+                            id='1'></li>
+                    <li class="slide-min"><img src="./images/slider/item_3.jfif"
+                            id='2'></li>
+                    <li class="slide-min"><img src="./images/slider/item_4.jfif"
+                            id='3'></li>
+                    <li class="slide-min"><img src="./images/slider/item_5.jfif"
+                            id='4'></li>
                 </ul>
             </section>
         </aside>
@@ -183,7 +212,24 @@
 
     </div>
 
-    <section id='skills' class="skills">
+    <section class="wrap canvas-wrap">
+        <div class="canvas">
+            <div>
+                <canvas class='canvas__main' id='canvas'></canvas>
+            </div>
+            <div>
+                <form class='canvas__painting-tools'>
+                    <b>Choose a marker color:</b>
+                    <input type="color" name='canvas-color' id='canvasColor'>
+                    <b>Choose the thickness of the brush:</b>
+                    <input type="range" name='canvas-range' id='canvasRange' min="1" max="100">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id='skills'
+        class="skills">
         <div class="skill-1">
             <img class='skill-img'
                 src="images/skills/skill_1.png"
@@ -220,7 +266,8 @@
     </section>
 
 
-    <section id='carts' class='cart-box'>
+    <section id='carts'
+        class='cart-box'>
 
         <div class="cart-1">
             <h5><a class='cart-link-text'
@@ -397,7 +444,8 @@
         </table>
     </section>
 
-    <form id='form-poll' class='form-poll'
+    <form id='form-poll'
+        class='form-poll'
         action=""
         autocomplete
         method='get'
@@ -534,7 +582,7 @@
         <p>
             Длина в дюймах: <output name="result">0</output>
         </p>
-    </form> 
+    </form>
 
     <div class='anim-message'>
         <div class='anim-message__bg'></div>
@@ -555,7 +603,8 @@
     </div>
 
 
-    <section id='features' class="features-wrap wrap">
+    <section id='features'
+        class="features-wrap wrap">
         <div class="features-content">
             <a href="#">about us</a>
             <h2><a href="#">Read about our app</a></h2>
@@ -631,7 +680,8 @@
     </div>
 
 
-    <section id='started' class='get-started-wrap'>
+    <section id='started'
+        class='get-started-wrap'>
         <div class="get-started">
             <a href="#">PLAN YOUR LIFE</a>
             <h5><a href="#">Get <b class='fw-bold'>started</b> now</a></h5>
@@ -648,7 +698,7 @@
             </p>
         </div>
     </section>
- 
+
     <script src="./scripts/index.js"></script>
 </body>
 
