@@ -136,61 +136,93 @@ function slideSet() {
 
 
 // canvas
-window.onload = playAnimation;
-
 const main = {};
 
-function init() {
+const drawArc = () => {
+	main.ctx.beginPath();
+	main.ctx.arc(main.brush.x, main.brush.y, main.brush.radius, 0, 2 * Math.PI);
+	main.ctx.fill();
+}
+
+const setBrushCoords = (eX, eY) => {
+	main.brush.x = eX - main.canvas.getBoundingClientRect().x - document.documentElement.scrollLeft;
+	main.brush.y = eY - main.canvas.getBoundingClientRect().y - document.documentElement.scrollTop;
+}
+
+const setBrush = (e) => {
+
+	if (main.canvasRange.value < 7) {
+		main.ctx.beginPath();
+		main.ctx.moveTo(main.brush.x, main.brush.y);
+
+		setBrushCoords(e.pageX, e.pageY);
+
+		main.ctx.lineTo(main.brush.x, main.brush.y);
+		main.ctx.stroke();
+	} else {
+		setBrushCoords(e.pageX, e.pageY);
+		drawArc();
+	}
+}
+
+const draw = (e) => {
+	setBrushCoords(e.pageX, e.pageY);
+	if (!(main.canvasRange.value < 7)) {
+		drawArc();
+	}
+	canvas.addEventListener('mousemove', setBrush);
+}
+const setCanvasRange = () => {
+	main.ctx.lineWidth = main.canvasRange.value;
+	main.brush.radius = main.canvasRange.value;
+}
+const setCanvasColor = () => {
+	main.ctx.strokeStyle = main.canvasColor.value;
+	main.ctx.fillStyle = main.canvasColor.value;
+}
+const resize = () => {
+	main.canvas.width = main.canvas.clientWidth;
+	main.canvas.height = main.canvas.clientHeight;
+}
+
+const init = () => {
 	main.canvas = document.getElementById('canvas');
 	main.ctx = canvas.getContext('2d');
 	main.canvasColor = document.getElementById('canvasColor');
 	main.canvasRange = document.getElementById('canvasRange');
 
-	main.canvas.width = 500;
-	main.canvas.height = 300;
+	resize();
 
 	main.brush = {
 		x: main.canvas.width / 2,
 		y: main.canvas.height / 2,
-		radius: 0,
-		fillStyle: 'rgba(219, 20, 20, 1)',
-		// width: 2,
+		radius: 2
 	};
-	main.ctx.fillStyle = main.brush.fillStyle;	
 
-	canvas.addEventListener('mousemove', setBrush);
-	main.canvasColor.addEventListener('input', () => main.ctx.fillStyle = main.canvasColor.value);
-    main.canvasRange.addEventListener('input', () => main.brush.radius = main.canvasRange.value); 
+	setCanvasRange();
+
+	main.canvas.addEventListener('mousedown', draw);
+	document.addEventListener('mouseup', () => main.canvas.removeEventListener('mousemove', setBrush));
+	main.canvasColor.addEventListener('input', setCanvasColor);
+	main.canvasRange.addEventListener('input', setCanvasRange);
 };
 
 
+window.onload = init;
+window.onresize = resize;
 
-function animation() {
-	update();
-	render();
-	main.anim = requestAnimationFrame(animation);
-};
 
-function setBrush(event) {
-    main.brush.x = event.pageX - main.canvas.getBoundingClientRect().x - document.documentElement.scrollLeft;
-    main.brush.y = event.pageY - main.canvas.getBoundingClientRect().y - document.documentElement.scrollTop;
+// плавный скроллинг по странице
+menu.addEventListener('click', scrollingTransition);
+
+function scrollingTransition(event) {
+	if (event.target.tagName === 'A') {
+		event.preventDefault();
+		const blockId = event.target.getAttribute('href');
+		let id = document.querySelector('' + blockId);
+		id.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		});
+	}
 }
-
-function render() {
-	main.ctx.beginPath();
-	main.ctx.arc(main.brush.x, main.brush.y, main.brush.radius, 0, 2 * Math.PI);
-	main.ctx.fill();
-};
-
-
-
-function update() {
-	
-};
-
-
-
-function playAnimation() {
-	init();
-	animation();
-};
