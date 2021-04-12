@@ -12,7 +12,7 @@
 
 <body>
 
-    <header id='header'>
+    <header id='header' class='header'>
         <div class="header-content">
             <div class="header-content__left">
                 <div class="logo"><a href="#"></a></div>
@@ -79,10 +79,12 @@
         </form>
     </section>
 
+    <section class="wrap contact-wrap">
+        <div class="contact"><a href="#"></a></div>
+        <button id='calculator'
+            class='calculator btn'>Calculator</button>
+    </section>
 
-    <div class="contact"><a href="#"></a></div>
-    <button id='calculator'
-        class='calculator btn'>Calculator</button>
 
     <div id='blog'
         class="blog">
@@ -215,360 +217,397 @@
     <section class="wrap canvas-wrap">
         <div class="canvas">
             <div>
-                <canvas class='canvas__main' id='canvas'></canvas>
+                <canvas class='canvas__main'
+                    id='canvas'></canvas>
             </div>
             <div>
                 <form class='canvas__painting-tools'>
                     <b>Choose a marker color:</b>
-                    <input type="color" name='canvas-color' id='canvasColor'>
+                    <input type="color"
+                        name='canvas-color'
+                        id='canvasColor'>
                     <b>Choose the thickness of the brush:</b>
-                    <input type="range" name='canvas-range' id='canvasRange' value='4' min="1" max="100">
+                    <input type="range"
+                        name='canvas-range'
+                        id='canvasRange'
+                        value='4'
+                        min="1"
+                        max="100">
                 </form>
             </div>
         </div>
     </section>
 
     <section id='skills'
-        class="skills">
-        <div class="skill-1">
-            <img class='skill-img'
-                src="images/skills/skill_1.png"
-                alt="">
-            <h3>Quality</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-            </p>
+        class="parent">
+        <div class="elem d-none">
+            <div class="skills">
+                <div class="skill-1">
+                    <img class='skill-img'
+                        src="images/skills/skill_1.png"
+                        alt="">
+                    <h3>Quality</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="skill-1">
+                    <img class='skill-img'
+                        src="images/skills/skill_2.png"
+                        alt="">
+                    <h3>Speed</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="skill-2">
+                    <h3>Why us?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                    </p>
+                </div>
+                <div class="skill-3">
+                    <a href="#">
+                        <img src="images/skills/skill_3.jpg"
+                            alt="">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="skill-1">
-            <img class='skill-img'
-                src="images/skills/skill_2.png"
-                alt="">
-            <h3>Speed</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-            </p>
-        </div>
-        <div class="skill-2">
-            <h3>Why us?</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            </p>
-        </div>
-        <div class="skill-3">
-            <a href="#">
-                <img src="images/skills/skill_3.jpg"
-                    alt="">
-            </a>
-        </div>
-    </section>
 
+    </section>
 
     <section id='carts'
-        class='cart-box'>
+        class="parent">
+        <div class="elem d-none">
+            <div class='carts'>
 
-        <div class="cart-1">
-            <h5><a class='cart-link-text'
-                    href="#">Cart 1</a></h5>
-            <a class='cart-link'
-                href="#">
-                <img src="images/carts/0.jpg"
-                    alt="Картинка загружается">
-            </a>
-            <a class='cart-link'
-                href="#">
-                <img src="images/carts/1.jpg"
-                    alt="Картинка загружается">
-            </a>
-            <a class='cart-link'
-                href="#">
-                <img src="images/carts/2.jpg"
-                    alt="Картинка загружается">
-            </a>
+                <div class="cart-1">
+                    <h5><a class='cart-link-text'
+                            href="#">Cart 1</a></h5>
+                    <a class='cart-link'
+                        href="#">
+                        <img src="images/carts/0.jpg"
+                            alt="Картинка загружается">
+                    </a>
+                    <a class='cart-link'
+                        href="#">
+                        <img src="images/carts/1.jpg"
+                            alt="Картинка загружается">
+                    </a>
+                    <a class='cart-link'
+                        href="#">
+                        <img src="images/carts/2.jpg"
+                            alt="Картинка загружается">
+                    </a>
+                </div>
+
+                <div class="cart-2">
+                    <h5><a class='cart-link-text'
+                            href="#">Cart 2</a></h5>
+                    <p>
+                        <a class='cart-link-text'
+                            href="#">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut
+                            aliquip ex ea commodo consequat.
+                        </a>
+                    </p>
+                </div>
+
+                <div class="cart-3">
+                    <h5><a class='cart-link-text'
+                            href="#">Cart 3</a></h5>
+                    <p>
+                        <a class='cart-link-text'
+                            href="#">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et
+                            dolore magna aliqua.
+                        </a>
+                    </p>
+                </div>
+
+                <div class="cart-4">
+                    <h5><a class='cart-link-text'
+                            href="#">Cart 4</a></h5>
+                    <p>
+                        <a class='cart-link-text'
+                            href="#">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et
+                            dolore magna aliqua.
+                        </a>
+                    </p>
+                </div>
+
+                <div class="cart-5">
+                    <h5><a class='cart-link-text'
+                            href="#">Cart 5</a></h5>
+                    <p>
+                        <a class='cart-link-text'
+                            href="#">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et
+                            dolore magna aliqua. t aliquip ex ea commodo consequat t aliquip ex ea commodo consequat.
+                        </a>
+                    </p>
+                </div>
+
+            </div>
         </div>
-
-        <div class="cart-2">
-            <h5><a class='cart-link-text'
-                    href="#">Cart 2</a></h5>
-            <p>
-                <a class='cart-link-text'
-                    href="#">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </a>
-            </p>
-        </div>
-
-        <div class="cart-3">
-            <h5><a class='cart-link-text'
-                    href="#">Cart 3</a></h5>
-            <p>
-                <a class='cart-link-text'
-                    href="#">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua.
-                </a>
-            </p>
-        </div>
-
-        <div class="cart-4">
-            <h5><a class='cart-link-text'
-                    href="#">Cart 4</a></h5>
-            <p>
-                <a class='cart-link-text'
-                    href="#">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua.
-                </a>
-            </p>
-        </div>
-
-        <div class="cart-5">
-            <h5><a class='cart-link-text'
-                    href="#">Cart 5</a></h5>
-            <p>
-                <a class='cart-link-text'
-                    href="#">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. t aliquip ex ea commodo consequat t aliquip ex ea commodo consequat.
-                </a>
-            </p>
-        </div>
-
         </div>
     </section>
 
-    <section id='rating'>
-        <table class='table table-rating caption-top'>
-            <caption></caption>
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Herald</th>
-                    <th>Guardian</th>
-                    <th>Crusader</th>
-                    <th>Arshon</th>
-                    <th>Legend</th>
-                    <th>Ancient</th>
-                    <th>Divine</th>
-                    <th>
-                        <img class='table__img'
-                            src="images/table/hqdefault.jpg"
-                            alt="crown">
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>840</td>
-                    <td>1680</td>
-                    <td>2520</td>
-                    <td>3360</td>
-                    <td>4200</td>
-                    <td>5040</td>
-                    <td rowspan='5'></td>
-                </tr>
-                <tr>
-                    <td>&#8544;</td>
-                    <td>140</td>
-                    <td>980</td>
-                    <td>1820</td>
-                    <td>2660</td>
-                    <td>3500</td>
-                    <td>4340</td>
-                    <td>5180</td>
-                </tr>
-                <tr>
-                    <td>&#8545;</td>
-                    <td>280</td>
-                    <td>1120</td>
-                    <td>1960</td>
-                    <td>2800</td>
-                    <td>3640</td>
-                    <td>4480</td>
-                    <td>5320</td>
-                </tr>
-                <tr>
-                    <td>&#8546;</td>
-                    <td>420</td>
-                    <td>1260</td>
-                    <td>2100</td>
-                    <td>2940</td>
-                    <td>3780</td>
-                    <td>4620</td>
-                    <td>5460</td>
-                </tr>
-                <tr>
-                    <td>&#8547;</td>
-                    <td>560</td>
-                    <td>1140</td>
-                    <td>2780</td>
-                    <td>4620</td>
-                    <td>5360</td>
-                    <td>6200</td>
-                    <td>7040</td>
-                </tr>
-                <tr>
-                    <td>&#8548;</td>
-                    <td>610</td>
-                    <td>210</td>
-                    <td>3170</td>
-                    <td>4210</td>
-                    <td>5360</td>
-                    <td>6500</td>
-                    <td colspan='2'>8040</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>№</th>
-                    <th>Herald</th>
-                    <th>Guardian</th>
-                    <th>Crusader</th>
-                    <th>Arshon</th>
-                    <th>Legend</th>
-                    <th>Ancient</th>
-                    <th>Divine</th>
-                    <th></th>
-                </tr>
-            </tfoot>
-        </table>
+
+    <section id='rating'
+        class="parent">
+        <div class="elem d-none">
+            <div>
+                <table class='table table-rating caption-top'>
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Herald</th>
+                            <th>Guardian</th>
+                            <th>Crusader</th>
+                            <th>Arshon</th>
+                            <th>Legend</th>
+                            <th>Ancient</th>
+                            <th>Divine</th>
+                            <th>
+                                <img class='table__img'
+                                    src="images/table/hqdefault.jpg"
+                                    alt="crown">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>840</td>
+                            <td>1680</td>
+                            <td>2520</td>
+                            <td>3360</td>
+                            <td>4200</td>
+                            <td>5040</td>
+                            <td rowspan='5'></td>
+                        </tr>
+                        <tr>
+                            <td>&#8544;</td>
+                            <td>140</td>
+                            <td>980</td>
+                            <td>1820</td>
+                            <td>2660</td>
+                            <td>3500</td>
+                            <td>4340</td>
+                            <td>5180</td>
+                        </tr>
+                        <tr>
+                            <td>&#8545;</td>
+                            <td>280</td>
+                            <td>1120</td>
+                            <td>1960</td>
+                            <td>2800</td>
+                            <td>3640</td>
+                            <td>4480</td>
+                            <td>5320</td>
+                        </tr>
+                        <tr>
+                            <td>&#8546;</td>
+                            <td>420</td>
+                            <td>1260</td>
+                            <td>2100</td>
+                            <td>2940</td>
+                            <td>3780</td>
+                            <td>4620</td>
+                            <td>5460</td>
+                        </tr>
+                        <tr>
+                            <td>&#8547;</td>
+                            <td>560</td>
+                            <td>1140</td>
+                            <td>2780</td>
+                            <td>4620</td>
+                            <td>5360</td>
+                            <td>6200</td>
+                            <td>7040</td>
+                        </tr>
+                        <tr>
+                            <td>&#8548;</td>
+                            <td>610</td>
+                            <td>210</td>
+                            <td>3170</td>
+                            <td>4210</td>
+                            <td>5360</td>
+                            <td>6500</td>
+                            <td colspan='2'>8040</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>№</th>
+                            <th>Herald</th>
+                            <th>Guardian</th>
+                            <th>Crusader</th>
+                            <th>Arshon</th>
+                            <th>Legend</th>
+                            <th>Ancient</th>
+                            <th>Divine</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </section>
 
-    <form id='form-poll'
-        class='form-poll'
-        action=""
-        autocomplete
-        method='get'
-        name='form-poll'>
-        <h2>Заполните форму</h2>
 
-        <div class='form-poll__data'>
-            <p>
-                <b>Введите ваше имя:</b>
-                <input type="text"
-                    name='username'
-                    required>
-            </p>
-            <p>
-                <b>Введите ваш email:</b>
-                <input type="email"
-                    name='email'
-                    required>
-            </p>
+    <section id='form-poll'
+        class="parent">
+        <div class="elem d-none">
+            <form class='form-poll'
+                action=""
+                autocomplete
+                method='get'
+                name='form-poll'>
+                <h2>Заполните форму</h2>
+
+                <div class='form-poll__data'>
+                    <p>
+                        <b>Введите ваше имя:</b>
+                        <input type="text"
+                            name='username'
+                            required>
+                    </p>
+                    <p>
+                        <b>Введите ваш email:</b>
+                        <input type="email"
+                            name='email'
+                            required>
+                    </p>
+                </div>
+
+                <div class='form-poll__data'>
+                    <p>
+                        <b>Введите пароль:</b>
+                        <input type="password"
+                            name='password'
+                            required>
+                    </p>
+                    <p>
+                        <b>Введите ваш возраст:</b>
+                        <input type="number"
+                            name='number'
+                            required>
+                    </p>
+                </div>
+
+                <p>
+                    <b>Выберите ваш любимый цвет:</b>
+                    <input type="color"
+                        name='color'>
+
+                    <b>Прикрепите ваше резюме:</b>
+                    <input type="file"
+                        name='file'>
+                </p>
+
+                <p>
+                    <b>Укажите дату начала работы:</b>
+                    <input type="date"
+                        name='date'>
+                </p>
+
+
+                <p class='fild'>
+                    <b>Выберите направление:</b><br>
+
+                    <label for="frontend">Frontend</label>
+                    <input type="checkbox"
+                        name='check'
+                        id='frontend'>
+
+                    <label for="backend">Backend</label>
+                    <input type="checkbox"
+                        name='check'
+                        id='backend'>
+
+                    <label for="fullstack">Fullstack</label>
+                    <input type="checkbox"
+                        name='check'
+                        id='fullstack'>
+                </p>
+
+
+                <p class='fild'>
+                    <b>Выберите тип занятости:</b><br>
+
+                    <label for="office">Офис</label>
+                    <input type="radio"
+                        name='rad'
+                        id='office'>
+
+                    <label for="remotely">Удаленно</label>
+                    <input type="radio"
+                        name='rad'
+                        id='remotely'>
+
+                    <label for="almost">Частичная занятость</label>
+                    <input type="radio"
+                        name='rad'
+                        id='almost'>
+                </p>
+
+                <p class='fild'>
+                    <b>Почему мы должны взять именно вас?</b><br>
+                    <textarea name="comments"
+                        id=""
+                        cols="30"
+                        rows="3"></textarea>
+                </p>
+
+                <p class='captcha fild'>
+                    <b>Введите число с картинки:</b><br>
+                    <img src="images/form/captcha.jfif"
+                        alt="">
+                    <input class='captcha__check'
+                        type="text"
+                        name='captcha'
+                        required
+                        pattern="801134587">
+                    <span class="captcha__span"></span>
+                    <span class="captcha__false">Неверное число</span>
+                </p>
+
+                <p>
+                    <input class="btn btn-primary"
+                        type="reset"
+                        name='reset'
+                        value='Очистить'>
+                    <input class="btn btn-success"
+                        type="submit"
+                        name='submit'>
+                </p>
+            </form>
         </div>
+    </section>
 
-        <div class='form-poll__data'>
-            <p>
-                <b>Введите пароль:</b>
-                <input type="password"
-                    name='password'
-                    required>
-            </p>
-            <p>
-                <b>Введите ваш возраст:</b>
-                <input type="number"
-                    name='number'
-                    required>
-            </p>
-        </div>
-
-        <p>
-            <b>Выберите ваш любимый цвет:</b>
-            <input type="color"
-                name='color'>
-
-            <b>Прикрепите ваше резюме:</b>
-            <input type="file"
-                name='file'>
-        </p>
-
-        <p>
-            <b>Укажите дату начала работы:</b>
-            <input type="date"
-                name='date'>
-        </p>
-
-
-        <p class='fild'>
-            <b>Выберите направление:</b><br>
-
-            <label for="frontend">Frontend</label>
-            <input type="checkbox"
-                name='check'
-                id='frontend'>
-
-            <label for="backend">Backend</label>
-            <input type="checkbox"
-                name='check'
-                id='backend'>
-
-            <label for="fullstack">Fullstack</label>
-            <input type="checkbox"
-                name='check'
-                id='fullstack'>
-        </p>
-
-
-        <p class='fild'>
-            <b>Выберите тип занятости:</b><br>
-
-            <label for="office">Офис</label>
-            <input type="radio"
-                name='rad'
-                id='office'>
-
-            <label for="remotely">Удаленно</label>
-            <input type="radio"
-                name='rad'
-                id='remotely'>
-
-            <label for="almost">Частичная занятость</label>
-            <input type="radio"
-                name='rad'
-                id='almost'>
-        </p>
-
-        <p class='fild'>
-            <b>Почему мы должны взять именно вас?</b><br>
-            <textarea name="comments"
-                id=""
-                cols="30"
-                rows="3"></textarea>
-        </p>
-
-        <p class='captcha fild'>
-            <b>Введите число с картинки:</b><br>
-            <img src="images/form/captcha.jfif"
-                alt="">
-            <input class='captcha__check'
-                type="text"
-                name='captcha'
-                required
-                pattern="801134587">
-            <span class="captcha__span"></span>
-            <span class="captcha__false">Неверное число</span>
-        </p>
-
-        <p>
-            <input class="btn btn-primary"
-                type="reset"
-                name='reset'
-                value='Очистить'>
-            <input class="btn btn-success"
-                type="submit"
-                name='submit'>
-        </p>
-    </form>
 
     <form class='form-poll'
         oninput="result.value=(cm.value / 2.54).toFixed(2)">
@@ -602,75 +641,79 @@
         </p>
     </div>
 
-
     <section id='features'
-        class="features-wrap wrap">
-        <div class="features-content">
-            <a href="#">about us</a>
-            <h2><a href="#">Read about our app</a></h2>
+        class="parent">
+        <div class="elem d-none">
+            <div class="features-wrap wrap">
+                <div class="features-content">
+                    <a href="#">about us</a>
+                    <h2><a href="#">Read about our app</a></h2>
 
-            <div class="features">
-                <div>
-                    <p class='features__icon'>
-                        <a href="#"><img src="images/features/overview.png"
-                                alt="overview"></a>
-                    </p>
-                    <h5><a href="#">Overview</a></h5>
-                    <p class='features__text'>
-                        <a href="#">
-                            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
-                        </a>
-                    </p>
-                </div>
+                    <div class="features">
+                        <div>
+                            <p class='features__icon'>
+                                <a href="#"><img src="images/features/overview.png"
+                                        alt="overview"></a>
+                            </p>
+                            <h5><a href="#">Overview</a></h5>
+                            <p class='features__text'>
+                                <a href="#">
+                                    Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+                                </a>
+                            </p>
+                        </div>
 
-                <div>
-                    <p class="features__icon">
-                        <a href="#"><img src="images/features/files.png"
-                                alt="files"></a>
+                        <div>
+                            <p class="features__icon">
+                                <a href="#"><img src="images/features/files.png"
+                                        alt="files"></a>
+                            </p>
+                            <h5><a href="#">Files</a></h5>
+                            <p class='features__text'>
+                                <a href="#">
+                                    No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.
+                                </a>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="features__icon">
+                                <a href="#"><img src="images/features/meeting.png"
+                                        alt="meeting"></a>
+                            </p>
+                            <h5><a href="#">Meeting chats</a></h5>
+                            <p class='features__text'>
+                                <a href="#">
+                                    Vim ne tacimates neglegentur. Erat diceret omittam at est.
+                                </a>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="features__icon">
+                                <a href="#"><img src="images/features/save.png"
+                                        alt="save"></a>
+                            </p>
+                            <h5><a href="#">Save events</a></h5>
+                            <p class='features__text'>
+                                <a href="#">
+                                    Nisl idque mel ea, nominati voluptatum.
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="block-buttons">
+                        <a class='wrap'
+                            href="#">Read more</a>
+                        <span>OR</span>
+                        <a class='wrap'
+                            href="#">Get started</a>
                     </p>
-                    <h5><a href="#">Files</a></h5>
-                    <p class='features__text'>
-                        <a href="#">
-                            No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.
-                        </a>
-                    </p>
-                </div>
-                <div>
-                    <p class="features__icon">
-                        <a href="#"><img src="images/features/meeting.png"
-                                alt="meeting"></a>
-                    </p>
-                    <h5><a href="#">Meeting chats</a></h5>
-                    <p class='features__text'>
-                        <a href="#">
-                            Vim ne tacimates neglegentur. Erat diceret omittam at est.
-                        </a>
-                    </p>
-                </div>
-                <div>
-                    <p class="features__icon">
-                        <a href="#"><img src="images/features/save.png"
-                                alt="save"></a>
-                    </p>
-                    <h5><a href="#">Save events</a></h5>
-                    <p class='features__text'>
-                        <a href="#">
-                            Nisl idque mel ea, nominati voluptatum.
-                        </a>
-                    </p>
+
                 </div>
             </div>
-
-            <p class="block-buttons">
-                <a class='wrap'
-                    href="#">Read more</a>
-                <span>OR</span>
-                <a class='wrap'
-                    href="#">Get started</a>
-            </p>
-
         </div>
     </section>
+
 
     <div class="visual-section-1"></div>
     <div class="visual-section-2">
@@ -681,13 +724,14 @@
 
 
     <section id='started'
-        class='get-started-wrap'>
+        class="get-started-wrap">
         <div class="get-started">
             <a href="#">PLAN YOUR LIFE</a>
             <h5><a href="#">Get <b class='fw-bold'>started</b> now</a></h5>
             <p class='get-started__text'>
                 <a href="#">
-                    Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens
+                    Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an,
+                    insolens
                     gubergren
                     similique est cu. Et vel modus congue vituperata.
                 </a>
@@ -698,6 +742,7 @@
             </p>
         </div>
     </section>
+
 
     <script src="./scripts/index.js"></script>
 </body>

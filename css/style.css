@@ -127,7 +127,15 @@ a {
 .close:hover {
     opacity: 0.6;
 }
-
+.d-block{
+    display: block;
+}
+.d-none{
+    display: none;
+}
+.elem{
+    animation: animElem 1s 1;
+}
 /* modal-form style start */
 
 .modal-form {
@@ -149,13 +157,12 @@ a {
     background: rgba(175, 215, 223, 0.966);
     border-radius: 5px;
     box-shadow: 8px 8px 7px -1px rgb(160, 153, 153);
-    animation: loginForm 0.3s 1;
+    animation: animElem 0.3s 1;
 }
 
-@keyframes loginForm {
+@keyframes animElem {
     0% {
         opacity: 0;
-        transform: scale(0.1);
     }
 }
 
@@ -182,7 +189,7 @@ a {
 
 /* header start */
 
-header {
+.header {
     min-height: 80px;
     padding-top: 10px;
     font-family: 'Quicksand';
@@ -337,32 +344,13 @@ nav {
     grid-row-gap: 30px;
 }
 @media screen and (max-width: 700px) {
-    .canvas{
-        width: 100%;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(2, auto);
-        justify-content: center;
-    }
-    .canvas__main{
-        width: 500px;
-        height: 300px;
-        
-    }
-}
-@media screen and (max-width: 520px) {
-    .canvas__main{
-        width: 100%;
-        
+    .canvas-wrap{
+        display: none;
     }
 }
 /* canvas style end */
 
-.calculator {
-    position: sticky;
-    top: 15px;
-    left: 57%;
-    font-size: 1.1rem;
-}
+
 
 .blog {
     display: flex;
@@ -549,11 +537,14 @@ p[class |='text'] {
 /* article end */
 
 /* contact start */
-
+.contact-wrap{
+    position: sticky;
+    top: 10px;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
 .contact {
     position: relative;
-    top: 10px;
-    left: 85%;
     width: 50px;
     height: 50px;
     background-image: url('../images/whatsApp.png');
@@ -574,6 +565,10 @@ p[class |='text'] {
     content: '';
     border: 15px solid transparent;
     border-top: 15px solid rgb(27, 200, 63);
+}
+.calculator {
+    margin-left: 20px;
+    font-size: 1.1rem;
 }
 
 /* contact end */
@@ -631,7 +626,7 @@ label#check.lab.show {
     align-items: baseline;
 }
 
-div[class ^='skill'] {
+div[class |='skill'] {
     flex-basis: 250px;
 }
 
@@ -682,7 +677,7 @@ div[class ^='skill'] {
 
 /* cart-box start  */
 
-.cart-box {
+.carts {
     width: 80%;
     min-height: 400px;
     margin: 0 auto;
@@ -693,7 +688,7 @@ div[class ^='skill'] {
     grid-gap: 20px;
 }
 
-div[class ^='cart'] {
+div[class |='cart'] {
     background: gold;
     border: 3px solid orange;
     border-radius: 8px;
