@@ -44,7 +44,7 @@ const header = document.getElementById('header');
 
 const toggleMenu = () => {
 	menu.classList.toggle('menu-none');
-	header.classList.toggle('m-b-60');
+	header.classList.toggle('m-b-150');
 }
 
 menuBurger.addEventListener('click', toggleMenu);
@@ -216,7 +216,7 @@ window.onresize = resize;
 menu.addEventListener('click', scrollingTransition);
 
 function scrollingTransition(event) {
-	if (event.target.tagName === 'A') {
+	if (event.target.tagName === 'A' && event.target.id !== 'link-shop') {
 
 		for (let i = 0; i < parent.length; i++) {
 			elem[i].className = 'elem d-block';

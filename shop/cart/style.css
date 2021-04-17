@@ -1,0 +1,14 @@
+#basketShop{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    background: gray;
+    padding: 20px;
+    border-radius: 5px;
+}
+.close-basketShop-icon{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}

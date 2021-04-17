@@ -1,0 +1,107 @@
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+}
+.canvasSky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    z-index: -1;
+  }
+.main-container{
+    width: 800px;
+    padding: 5px;
+    margin: 30px auto;
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+}
+.header{
+    padding-right: 35px;
+}
+.menu-shop{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    grid-gap: 10px;
+}
+.menu-shop__link{
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: transparent;
+    color: rgb(24, 34, 33);
+    transition: 0.3s;
+}
+.menu-shop__link:hover, .menu-shop__link:focus, .menu-shop__link:active{
+    background: transparent;
+    color: rgba(172, 28, 28, 0.863);
+}
+.btn-shop{
+    border: none;
+    background: rgba(136, 27, 27, 0.863);
+    color:rgb(225, 233, 236);
+    transition: .3s;
+}
+.btn-shop:hover{
+    background: rgba(172, 28, 28, 0.863);
+}
+.products{
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 50px;
+}
+
+.item_box{
+    text-align: center;
+}
+.img-box img{
+    width: 150px;
+    height: 100px;
+    transition: 0.3s;
+}
+.img-box img:hover{
+    transform: scale(1.1);
+}
+.cart-wrap{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(117, 112, 112, 0.6);
+    display: none;
+}
+#basketShop{
+    width: 350px;
+    background: rgb(61, 175, 219);
+    animation: animElem 0.3s 1;
+}
+.footer{
+    min-height: 160px;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-gap: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 820px){
+    .main-container{
+        width: 100%;
+        margin: 0;
+    }
+    .products{
+        grid-template-rows: repeat(10, auto);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .canvasSky {
+        display: none;
+      }
+}
+
+
+
