@@ -3,7 +3,7 @@
 const cart = {
 
     // Добавляем товар в корзину
-    addToCart( title, price, basketShop) {
+    addToCart(title, price, basket) {
         event.target.disabled = true; // блокируем кнопку на время операции с корзиной
         let cartData = cart.getCartData() || {}, // получаем данные корзины или создаём новый объект, если данных еще нет
             parentBox = event.target.parentNode, // родительский элемент кнопки "Добавить в корзину"
@@ -16,7 +16,7 @@ const cart = {
         if (!cart.setCartData(cartData)) { // Обновляем данные в LocalStorage
             event.target.disabled = false; // разблокируем кнопку после обновления LS
         }
-        basketShopWrap.style.display = 'flex';
+        basket.style.display = 'flex';
         return false;
     },
 
@@ -71,10 +71,7 @@ const cart = {
             }
             totalItems += '</table>';
             cartCont.innerHTML = totalItems;
-        } else {
-            // если в корзине пусто, то сигнализируем об этом
-            cartCont.innerHTML = 'В корзине пусто!';
-        }
+        } 
         cart.addEventcloseCart(cartCont);
         return false;
     },

@@ -135,6 +135,58 @@ function slideSet() {
 }
 
 
+
+// плавный скроллинг по странице
+menu.addEventListener('click', scrollingTransition);
+
+function scrollingTransition(event) {
+	if (event.target.tagName === 'A' && event.target.id !== 'link-shop') {
+
+		for (let i = 0; i < parent.length; i++) {
+			elem[i].className = 'elem d-block';
+		}
+
+		event.preventDefault();
+		const blockId = event.target.getAttribute('href');
+		let id = document.querySelector(blockId);
+		id.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		});
+		
+	}
+}
+
+
+
+// появление элементов при скролле
+const parent = document.querySelectorAll('.parent');
+const elem = document.querySelectorAll('.parent > .elem');
+
+
+window.addEventListener('scroll', showVisible);
+
+
+function isVisible(elem) {
+	let coords = elem.getBoundingClientRect();
+	let windowHeight = document.documentElement.clientHeight;
+	let topVisible = coords.top > 0 && coords.top < windowHeight;
+	let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+
+	return topVisible && bottomVisible;
+}
+
+function showVisible() {
+	for (let i = 0; i < parent.length; i++) {
+		if (isVisible(parent[i])) {
+			elem[i].className = 'elem d-block';
+		}
+	}
+}
+
+
+
+
 // canvas
 const main = {};
 
@@ -210,52 +262,3 @@ const init = () => {
 
 window.onload = init;
 window.onresize = resize;
-
-
-// плавный скроллинг по странице
-menu.addEventListener('click', scrollingTransition);
-
-function scrollingTransition(event) {
-	if (event.target.tagName === 'A' && event.target.id !== 'link-shop') {
-
-		for (let i = 0; i < parent.length; i++) {
-			elem[i].className = 'elem d-block';
-		}
-
-		event.preventDefault();
-		const blockId = event.target.getAttribute('href');
-		let id = document.querySelector('' + blockId);
-		id.scrollIntoView({
-			behavior: 'smooth',
-			block: 'start'
-		});
-		
-	}
-}
-
-
-
-// появление элементов при скролле
-const parent = document.querySelectorAll('.parent');
-const elem = document.querySelectorAll('.parent > .elem');
-
-
-window.addEventListener('scroll', showVisible);
-
-
-function isVisible(elem) {
-	let coords = elem.getBoundingClientRect();
-	let windowHeight = document.documentElement.clientHeight;
-	let topVisible = coords.top > 0 && coords.top < windowHeight;
-	let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
-
-	return topVisible && bottomVisible;
-}
-
-function showVisible() {
-	for (let i = 0; i < parent.length; i++) {
-		if (isVisible(parent[i])) {
-			elem[i].className = 'elem d-block';
-		}
-	}
-}
